@@ -18,9 +18,9 @@ int main() {
 		scanf("%d",&cardArr[i]);
 	}
 	
-	for(int j=0;j<cardNum;j++)
+	for(int j=0;j<cardNum-2;j++)
 	{
-		for(int p=j+1;p<cardNum;p++)
+		for(int p=j+1;p<cardNum-1;p++)
 		{
 			for(int q=j+2;q<cardNum;q++)
 			{
@@ -28,7 +28,7 @@ int main() {
 				cardSumArr[count] = cardArr[j]+cardArr[p]+cardArr[q];
 				count++;
 				
-				printf("j,p,q = %d,%d,%d",j,p,q);
+				printf("j,p,q = %d,%d,%d",cardArr[j],cardArr[p],cardArr[q]);
 				printf("\n");
 			}
 		}
@@ -52,4 +52,7 @@ int main() {
 		}
 	}
 	
+	printf("%d,%d,%d",maxNum,min,minTemp);
+	printf("\n");
+	printf("%d",maxNum-min);
 }
